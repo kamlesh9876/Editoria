@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editoria</title>
+    <link rel="stylesheet" href="Editor.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+AR:wght@100..400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <video autoplay muted loop id="header-background-video">
+            <source src="https://cdn.pixabay.com/video/2022/10/10/134252-758855560_large.mp4" type="video/mp4">
+            Your browser does not support HTML5 video. Here is a 
+        </video>
+        <h1>Editoria</h1>
+    </header>
+    <h2>Add an image to start editing</h2>
+    <div class="editor-container">
+        <div class="image-container">
+            <canvas id="canvas"></canvas>
+            <input type="file" id="upload" accept="image/*" style="display: none;" onchange="loadImage(event)">
+            <img id="uploaded-image" style="display: none;">
+        </div>
+    </div>
+    <button onclick="document.getElementById('upload').click();" class="add-image-button">Add Image</button>
+    <div class="buttons-container">
+        <div class="buttons">
+            <div class="filter-control">
+                <label for="grayscale">Grayscale</label>
+                <input type="range" id="grayscale" name="grayscale" min="0" max="100" value="0" onchange="applyFilters()">
+            </div>
+            <div class="filter-control">
+                <label for="sepia">Sepia</label>
+                <input type="range" id="sepia" name="sepia" min="0" max="100" value="0" onchange="applyFilters()">
+            </div>
+            <div class="filter-control">
+                <label for="invert">Invert</label>
+                <input type="range" id="invert" name="invert" min="0" max="100" value="0" onchange="applyFilters()">
+            </div>
+            <div class="filter-control">
+                <label for="brightness">Brightness</label>
+                <input type="range" id="brightness" name="brightness" min="100" max="200" value="100" onchange="applyFilters()">
+            </div>
+            <div class="filter-control">
+                <label for="contrast">Contrast</label>
+                <input type="range" id="contrast" name="contrast" min="100" max="200" value="100" onchange="applyFilters()">
+            </div>
+            <div class="filter-control">
+                <label for="blur">Blur</label>
+                <input type="range" id="blur" name="blur" min="0" max="10" value="0" onchange="applyFilters()">
+            </div>
+            <div class="filter-control">
+                <label for="hue-rotate">Hue Rotate</label>
+                <input type="range" id="hue-rotate" name="hue-rotate" min="0" max="360" value="0" onchange="applyFilters()">
+            </div>
+            <div class="filter-control">
+                <label for="saturate">Saturate</label>
+                <input type="range" id="saturate" name="saturate" min="100" max="300" value="100" onchange="applyFilters()">
+            </div>
+            <button onclick="resetFilters()">Reset</button>
+            <button onclick="downloadImage()">Download Image</button>
+            <button onclick="rotateImage()">Rotate Image</button>
+        </div>
+    </div>
+    <script src="Editor.js"></script>
+</body>
+</html>

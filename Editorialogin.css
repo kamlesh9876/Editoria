@@ -1,0 +1,92 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("https://img.freepik.com/free-vector/flat-design-forest-landscape_23-2149162735.jpg?t=st=1723796365~exp=1723799965~hmac=39a66964ea4261c030c0ebf90d5ea880cb4d10d292961ac71a9f4ad68d439db3&w=1380");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.content {
+  text-align: center;
+  background-color: #19433e;
+  padding: 2rem;
+  margin-top: 40%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(18, 9, 9, 0.1), rgba(83, 150, 83, 0.2), rgba(125, 125, 179, 0.3);
+  transform: translateY(-50%);
+  color: #010101;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  font-size: 0.8em;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.content:hover {
+  transform: translateY(-55%) scale(1.05);
+  box-shadow: 0 0 20px rgba(18, 9, 9, 0.2), rgba(83, 150, 83, 0.4), rgba(125, 125, 179, 0.6);
+}
+
+header h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 3rem;
+  color: #fcf6f6;
+  margin-bottom: 1rem;
+}
+
+.login-container {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.login-form h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #fbfafa;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #fffdfd;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #0b0e11;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+button[type="button"] {
+  background-color: #6c757d;
+}
+
+button:hover {
+  background-color: #0b1957;
+}
+
+button[type="button"]:hover {
+  background-color: #5a6268;
+}
